@@ -8,14 +8,6 @@ typedef struct
 	SDL_Rect postexte;
 }texte;
 
-void initialiservie(texte *textevie ,int *vie);
-void initialiserscore(texte *textescore,int score);
-void initialisertemps(texte *temps);
-void miseajourvie(texte *textevie, int *vie);
-void miseajourcore(texte *textescore,int *score);
-void miseajourtemps(texte *temps);
-void affichervie(texte textevie,int vie);
-void afficherscore(texte textescore,int score);
-void affichertemps(texte temps);
+
 
 #endif
