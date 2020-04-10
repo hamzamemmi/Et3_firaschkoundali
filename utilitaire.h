@@ -5,7 +5,7 @@ typedef struct
 {	SDL_Color couleur;
 	SDL_Surface *texte;
 	TTF_Font *police=NULL;
-	SDL_Rect posvie;
+	SDL_Rect postexte;
 }texte;
 
 void initialiservie(texte *textevie ,int *vie);
