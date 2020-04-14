@@ -12,6 +12,11 @@ struct text {
 };
 typedef struct text Text;
 
+typedef struct time
+{
+    int mm, ss;
+} time;
+
 void initText(Text* T);
 void update_txt(Text* T, int vies);
 void displayText(Text T,SDL_Surface *screen);
@@ -19,10 +24,9 @@ void freeText(Text* T);
 int loadFont(Text* T, char* path);
 void initialiserscore(texte *textescore,int score);
 void miseajourcore(texte *textescore,int *score);
-void miseajourtemps(texte *temps);
 void afficherscore(texte textescore,int score);
-void affichertemps(texte temps);
-
+time Timer(time t, int *tick);
+void afficherTime(time t);
 
 
 #endif
