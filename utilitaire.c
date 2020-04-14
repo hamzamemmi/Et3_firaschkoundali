@@ -52,4 +52,30 @@ void freeText(Text* T)
     TTF_CloseFont(T->police); 
     TTF_Quit();    
 }
+time Timer(time t, int *tick)
+{
+    int tmp = t.mm * 60 + t.ss ;
+   if( SDL_GetTicks() - *tick >= 1000 )
+    {
+        *tick = SDL_GetTicks() ;
+        tmp--;
+        if( tmp < 0 )
+            tmp = 0 ;
+        t.mm = tmp / 60 ;
+        t.ss = tmp % 60 ;
+    }
+    return t;
+}
+void afficherTime(time t)
+{ 
+ SDL_Rect pos;
+pos.x=0;
+pos.y=0;
+TTF_Font *Font = TTF_OpenFont("breakway.ttf",60);
+SDL_Color couleur ={255,255,255};
+char time_in_text[6];
+sprintf(time_in_text,"%.2d:%.2d",t.mm,t.s);
+SDL_Surface *time =TTF_RenderText_Blended(Font, time_in_text, couleur);
+SDL_BlitSurface(time, NULL,screen,&pos);
+}
 
