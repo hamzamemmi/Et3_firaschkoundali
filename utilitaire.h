@@ -17,16 +17,19 @@ typedef struct time
     int mm, ss;
 } time;
 
-void initText(Text* T);
-void update_txt(Text* T, int vies);
-void displayText(Text T,SDL_Surface *screen);
-void freeText(Text* T);
-int loadFont(Text* T, char* path);
+void initTextv(Text* T);
+void update_txtv(Text* T, int vies);
+void displayTextv(Text T,SDL_Surface *screen);
+void freeTextv(Text* T);
+int loadFontv(Text* T, char* path);
+time Timer(time t, int *tick);
+void initTexttime(Text* T);
+int loadFonttime(Text* T, char* angelina);
+void update_txttime(Text* T, time t);
+void displayTexttime(Text T,SDL_Surface *screen);
+void freeTextv(Text* T);
 void initialiserscore(texte *textescore,int score);
 void miseajourcore(texte *textescore,int *score);
 void afficherscore(texte textescore,int score);
-time Timer(time t, int *tick);
-void afficherTime(time t);
-
 
 #endif
