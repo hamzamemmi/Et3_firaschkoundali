@@ -109,7 +109,7 @@ void displayTexttime(Text T,SDL_Surface *screen)
 
 }
 
-void freeTextv(Text* T)
+void freeTexttime(Text* T)
 {
     TTF_CloseFont(T->police); 
     TTF_Quit();    
