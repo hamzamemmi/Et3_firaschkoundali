@@ -1,6 +1,6 @@
 #ifndef UTILITAIRE_H_INCLUDED
 #define UTILITAIRE_H_INCLUDED
-#include "perso.h"
+#include "pers.h"
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 #include <string.h>
